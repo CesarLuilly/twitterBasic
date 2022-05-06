@@ -1,6 +1,6 @@
 # Instrucciones
 
-1.- Instalar las dependencias
+1.- Instalar las dependencias con npm install
 
 2.- Ejecutar las pruebas con npm test
 
