@@ -1,3 +1,5 @@
+const User = require("../models/User")
+
 class UserService {
     constructor(
         id, 
@@ -7,11 +9,6 @@ class UserService {
         this.id = id 
         this.userName = userName 
         this.name = name 
-        this.bio = "Sin bio"
-    }
-
-    set setUserName(userName){
-        this.userName = userName
     }
     
     static Create(
@@ -20,13 +17,13 @@ class UserService {
         name
         )
     {
-        return new UserService(id, userName, name)
+        return new User(id, userName, name, "Sin bio")
     }
 
     static getInfo(user){
         let arrInfo = [];
         arrInfo.push(user.id)
-        arrInfo.push(user.userName)
+        arrInfo.push(user.username)
         arrInfo.push(user.name)
         arrInfo.push(user.bio)
         return arrInfo
@@ -37,7 +34,7 @@ class UserService {
     }
 
     static getAllUsernames(users){
-        return users.map(user => user.userName);
+        return users.map(user => user.username);
     }
 }
 

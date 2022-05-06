@@ -7,14 +7,14 @@
 //     });
 //   })
 
-const UserService = require("./../../app/models/services/UserService")
+const UserService = require("../../app/services/UserService")
 
 describe("Tests for UserService", () => {
     test("1. Create a new User using the UserService", () => {
         const user = UserService.Create(1, "cesargarcia", "Cesar");
-        expect(user.userName).toBe("cesargarcia");
-        expect(user.name).toBe("Cesar");
         expect(user.id).toBe(1);
+        expect(user.username).toBe("cesargarcia");
+        expect(user.name).toBe("Cesar");
         expect(user.bio).not.toBeUndefined();
     })
 
@@ -30,7 +30,7 @@ describe("Tests for UserService", () => {
     test("3. Update username", () => {
         const user = UserService.Create(1, "cesargarcia", "Cesar");
         UserService.updateUsername(user, "luillys")
-        expect(user.userName).toBe("luillys");
+        expect(user.username).toBe("luillys");
     })
 
     test("4. Given a list of users give me the list of usernames", () => {

@@ -1,6 +1,8 @@
-# Tema
+# Instrucciones
 
-..
+1.- Instalar las dependencias
+
+2.- Ejecutar las pruebas con npm test
 
 # Herramientas
 

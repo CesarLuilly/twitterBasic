@@ -3,9 +3,7 @@ class User {
         id,
         username,
         name,
-        bio,
-        dateCreated, 
-        lastUpdated
+        bio
         )
     {
         this.id = id;
